@@ -1,0 +1,53 @@
+<!--
+pt 1a: create a webpage unorder list
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+</head>
+<body>
+<h1>Generate a list with Javascript</h1>
+    <!-- Input-->
+<input type="text">
+
+<br>
+<button id="add-text-button">Add the text to the list</button>
+
+<ul id="list-of-text-entries">
+<!-- empty-->
+</ul>
+
+<script>
+// giving elemts IDs usually easier to find each element**
+    let textInputElement = documents.querySelector
+    ('#text-input')
+    //console.log(textInputElement)
+    let addNewTextButton = document.querySelector('#add-text-bttn')
+    //console.log(addNewTextButton)
+    let textUnorderedList = document.querySelector('#list-of-text-entries')
+    let clearListButton = document.querySeelctor('#clear-list-button')
+
+addNewTextButton.addEventListener('click', function() {
+    // alert("button clicked!") //looks like this is working
+
+    let newText = textInputElement.value // value property
+    console.log(newText)
+
+    let newListItemElement = document.createElement('li')
+    //create list item
+    textUnorderedList.appendChild(newListItemElement)
+
+    newListItemElement.innerHTML = newText
+    textUnorderedList.appendChild(newListItemElement)
+
+})
+clearButton.addEvenetListener('click', function() {
+    console.log('clear list!')
+    textUnorderedList.innerHTML = '' // easiest way
+})
+
+</script>
+</body>
+</html>
